@@ -108,4 +108,6 @@ const tot_temperature_in_celsius =
   ((day29TempF - 32) * 5 / 9);
 
 const avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / 30;
+
+
 const avg_temperature_in_celsius = tot_temperature_in_celsius / 30;
