@@ -14,15 +14,6 @@
 //! After creating the four variables mentioned above, uncomment the following lines
 //* This way you can export them to the test file, this is essential for the tests to work
 
-module.exports = {
-     tot_temperature_in_fahrenheit,
-     tot_temperature_in_celsius,
-     avg_temperature_in_fahrenheit,
-     avg_temperature_in_celsius
-};
-
-
-
 /*
 =======
 Formula to pass from F to C : (tempInFahrenheit - 32) * 5 / 9
@@ -34,7 +25,6 @@ Formula to pass from C to F: (tempInCelsius * 9 / 5) + 32
 =======
 */
 
-// Convert every temperature to Fahrenheit and sum them
 // Individual day temperatures
 const day1TempF = 32;
 const day2TempC = 25;
@@ -67,6 +57,7 @@ const day28TempC = 17;
 const day29TempF = 76;
 const day30TempC = 29;
 
+// Total in Fahrenheit: Fahrenheit days as-is, Celsius days converted
 const tot_temperature_in_fahrenheit =
   day1TempF + day3TempF + day5TempF + day7TempF + day9TempF +
   day11TempF + day13TempF + day15TempF + day17TempF + day19TempF +
@@ -87,6 +78,7 @@ const tot_temperature_in_fahrenheit =
   (day28TempC * 9 / 5 + 32) +
   (day30TempC * 9 / 5 + 32);
 
+// Total in Celsius: Celsius days as-is, Fahrenheit days converted
 const tot_temperature_in_celsius =
   day2TempC + day4TempC + day6TempC + day8TempC + day10TempC +
   day12TempC + day14TempC + day16TempC + day18TempC + day20TempC +
@@ -107,9 +99,14 @@ const tot_temperature_in_celsius =
   ((day27TempF - 32) * 5 / 9) +
   ((day29TempF - 32) * 5 / 9);
 
+// Averages (30 days)
 const avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / 30;
 const avg_temperature_in_celsius = tot_temperature_in_celsius / 30;
 
-console.log(tot_temperature_in_fahrenheit, tot_temperature_in_celsius);
-console.log(avg_temperature_in_fahrenheit, avg_temperature_in_celsius);
- 
+// Export at the very bottom, after all variables are defined
+module.exports = {
+    tot_temperature_in_fahrenheit,
+    tot_temperature_in_celsius,
+    avg_temperature_in_fahrenheit,
+    avg_temperature_in_celsius
+};
