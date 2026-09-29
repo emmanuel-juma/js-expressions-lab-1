@@ -67,52 +67,45 @@ const day28TempC = 17;
 const day29TempF = 76;
 const day30TempC = 29;
 
-// Total in Fahrenheit (all temperatures converted to °F)
 const tot_temperature_in_fahrenheit =
-  // Already Fahrenheit
   day1TempF + day3TempF + day5TempF + day7TempF + day9TempF +
   day11TempF + day13TempF + day15TempF + day17TempF + day19TempF +
   day21TempF + day23TempF + day25TempF + day27TempF + day29TempF +
-  // Celsius → Fahrenheit
-  (day2TempC * 9 / 5) + 32 +
-  (day4TempC * 9 / 5) + 32 +
-  (day6TempC * 9 / 5) + 32 +
-  (day8TempC * 9 / 5) + 32 +
-  (day10TempC * 9 / 5) + 32 +
-  (day12TempC * 9 / 5) + 32 +
-  (day14TempC * 9 / 5) + 32 +
-  (day16TempC * 9 / 5) + 32 +
-  (day18TempC * 9 / 5) + 32 +
-  (day20TempC * 9 / 5) + 32 +
-  (day22TempC * 9 / 5) + 32 +
-  (day24TempC * 9 / 5) + 32 +
-  (day26TempC * 9 / 5) + 32 +
-  (day28TempC * 9 / 5) + 32 +
-  (day30TempC * 9 / 5) + 32;
+  (day2TempC * 9 / 5 + 32) +
+  (day4TempC * 9 / 5 + 32) +
+  (day6TempC * 9 / 5 + 32) +
+  (day8TempC * 9 / 5 + 32) +
+  (day10TempC * 9 / 5 + 32) +
+  (day12TempC * 9 / 5 + 32) +
+  (day14TempC * 9 / 5 + 32) +
+  (day16TempC * 9 / 5 + 32) +
+  (day18TempC * 9 / 5 + 32) +
+  (day20TempC * 9 / 5 + 32) +
+  (day22TempC * 9 / 5 + 32) +
+  (day24TempC * 9 / 5 + 32) +
+  (day26TempC * 9 / 5 + 32) +
+  (day28TempC * 9 / 5 + 32) +
+  (day30TempC * 9 / 5 + 32);
 
-// Total in Celsius (all temperatures converted to °C)
 const tot_temperature_in_celsius =
-  // Already Celsius
   day2TempC + day4TempC + day6TempC + day8TempC + day10TempC +
   day12TempC + day14TempC + day16TempC + day18TempC + day20TempC +
   day22TempC + day24TempC + day26TempC + day28TempC + day30TempC +
-  // Fahrenheit → Celsius
-  (day1TempF - 32) * 5 / 9 +
-  (day3TempF - 32) * 5 / 9 +
-  (day5TempF - 32) * 5 / 9 +
-  (day7TempF - 32) * 5 / 9 +
-  (day9TempF - 32) * 5 / 9 +
-  (day11TempF - 32) * 5 / 9 +
-  (day13TempF - 32) * 5 / 9 +
-  (day15TempF - 32) * 5 / 9 +
-  (day17TempF - 32) * 5 / 9 +
-  (day19TempF - 32) * 5 / 9 +
-  (day21TempF - 32) * 5 / 9 +
-  (day23TempF - 32) * 5 / 9 +
-  (day25TempF - 32) * 5 / 9 +
-  (day27TempF - 32) * 5 / 9 +
-  (day29TempF - 32) * 5 / 9;
+  ((day1TempF - 32) * 5 / 9) +
+  ((day3TempF - 32) * 5 / 9) +
+  ((day5TempF - 32) * 5 / 9) +
+  ((day7TempF - 32) * 5 / 9) +
+  ((day9TempF - 32) * 5 / 9) +
+  ((day11TempF - 32) * 5 / 9) +
+  ((day13TempF - 32) * 5 / 9) +
+  ((day15TempF - 32) * 5 / 9) +
+  ((day17TempF - 32) * 5 / 9) +
+  ((day19TempF - 32) * 5 / 9) +
+  ((day21TempF - 32) * 5 / 9) +
+  ((day23TempF - 32) * 5 / 9) +
+  ((day25TempF - 32) * 5 / 9) +
+  ((day27TempF - 32) * 5 / 9) +
+  ((day29TempF - 32) * 5 / 9);
 
-// Averages
 const avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / 30;
 const avg_temperature_in_celsius = tot_temperature_in_celsius / 30;
